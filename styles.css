@@ -1,21 +1,32 @@
 * {
-	box-sizing: content-box;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
 }
 
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+ 	--light-gray: hsl(0, 0%, 95%);
+}
+
 body {
-	background-color: hsl(0, 0%, 90%);
+	background-color: var(--light-gray);
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 80vh;
-	width: 70%;
-	margin: 20px auto;
+	justify-content: center;
+	width: 70vw;
+	height: auto;
+	margin: 15vh auto;
 }
 
 section {
@@ -24,67 +35,65 @@ section {
 	justify-content: center;
 	margin: 10px 0;
 	padding: 30px 40px;
-	width: 30%;
 	height: 70vh;
-	
 }
 
 .sedans {
-	background-color: #e28525;
+	background-color: var(--bright-orange);
 	border-radius: 5px 0px 0px 5px;
 }
 
 .suvs {
-	background-color: #016972;
+	background-color: var(--dark-cyan);
 }
 
 .luxury {
-	background-color: #00403f;
+	background-color: var(--very-dark-cyan);
 	border-radius: 0px 5px 5px 0px;
 }
 
 h3 {
+	font-family: "Big Shoulders Display", sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
 	text-transform: uppercase;
-	color: #f8ede5;
-	margin: 20px 0;
+	color: var(--light-gray);
+	margin: 30px 0 20px;
 }
 
 p {
 	margin: 5px 0;
 	margin-bottom: 15px;
 	letter-spacing: 1px;
-}
-
-.sedans > p {
-	color: #fac37a;
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 300;
+	font-size: 0.9em;
+	line-height: 2;
+	color: var(--transparent-white);
 }
 
 .sedans > a {
-	color: #e9ae60;
+	color: var(--bright-orange);
 }
 
-
-.suvs > p {
-	color: #9ddbe5;
+.suvs > a {
+	color: var(--dark-cyan);
 }
 
-.suvs > a, .luxury > a {
-	color: #538b95;
-}
-
-.luxury > p  {
-	color: #a5d5d5;
+.luxury > a {
+	color: var(--very-dark-cyan);
 }
 
 a {
 	border: 1px solid #fff;
-	padding: 5px 20px;
 	color: #fff;
 	border-radius: 40px;
+	padding: 15px 30px;
 	margin: 10px auto;
-	background-color: #ffd; 
+	background-color: var(--light-gray); 
 	text-decoration: none;
-	font-weight: bolder;
+	font-weight: 400;
+	font-family: "Lexend Deca", sans-serif;
 }
 
 a:hover {
@@ -93,18 +102,22 @@ a:hover {
 }
 
 .attribution {
-	width: 100vw;
-	position: absolute;
-	bottom: 20px;	
+	margin-top: 30px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 900px) {
 	main {
 		flex-direction: column;
 		height: auto;
-		width: 95%;
+		width: 100vw;
+		margin: 0;
 	}
-.attribution {
-	position: relative;	
-}
+
+	.section {
+		width: 100vw;
+		height: auto;
+		margin: 0;
+		padding: 0;
+		
+	}
 }
