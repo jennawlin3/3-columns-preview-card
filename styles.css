@@ -13,10 +13,16 @@
  	--light-gray: hsl(0, 0%, 95%);
 }
 
+
 body {
+	display: flex;
+	min-height: 100vh;
 	background-color: var(--light-gray);
 	font-optical-sizing: auto;
 	font-style: normal;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }
 
 main {
@@ -24,18 +30,16 @@ main {
 	justify-content: center;
 	align-items: center;
 	justify-content: center;
-	width: 70vw;
+	width: 800px;
 	height: auto;
-	margin: 15vh auto;
+	margin: auto;
 }
 
 section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 10px 0;
 	padding: 30px 40px;
-	height: 70vh;
 }
 
 .sedans {
@@ -84,6 +88,10 @@ p {
 	color: var(--very-dark-cyan);
 }
 
+.sedans > a:hover, .suvs > a:hover, .luxury > a:hover {
+	color: var(--transparent-white);
+}
+
 a {
 	border: 1px solid #fff;
 	color: #fff;
@@ -98,7 +106,7 @@ a {
 
 a:hover {
 	background-color: transparent;
-	transform: scale(1.25);
+	transform: scale(1.1);
 }
 
 .attribution {
@@ -116,8 +124,6 @@ a:hover {
 	.section {
 		width: 100vw;
 		height: auto;
-		margin: 0;
 		padding: 0;
-		
 	}
 }
